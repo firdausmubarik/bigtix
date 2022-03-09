@@ -1,12 +1,544 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="utf-8">
-  <title>Bigtix | BMS</title>
-  <base href="./">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-<style>@charset "UTF-8";@charset "UTF-8";@font-face{font-family:Poppins-Regular;src:url(Poppins-Regular.e3fe7ebf149d0933.ttf) format("truetype")}*{font-family:Poppins-Regular}:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13, 110, 253;--bs-secondary-rgb:108, 117, 125;--bs-success-rgb:25, 135, 84;--bs-info-rgb:13, 202, 240;--bs-warning-rgb:255, 193, 7;--bs-danger-rgb:220, 53, 69;--bs-light-rgb:248, 249, 250;--bs-dark-rgb:33, 37, 41;--bs-white-rgb:255, 255, 255;--bs-black-rgb:0, 0, 0;--bs-body-color-rgb:33, 37, 41;--bs-body-bg-rgb:255, 255, 255;--bs-font-sans-serif:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--bs-font-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-bg:#fff}*,*:before,*:after{box-sizing:border-box}@media (prefers-reduced-motion: no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13, 110, 253;--bs-secondary-rgb:108, 117, 125;--bs-success-rgb:25, 135, 84;--bs-info-rgb:13, 202, 240;--bs-warning-rgb:255, 193, 7;--bs-danger-rgb:220, 53, 69;--bs-light-rgb:248, 249, 250;--bs-dark-rgb:33, 37, 41;--bs-white-rgb:255, 255, 255;--bs-black-rgb:0, 0, 0;--bs-body-color-rgb:33, 37, 41;--bs-body-bg-rgb:255, 255, 255;--bs-font-sans-serif:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--bs-font-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-bg:#fff}*,*:before,*:after{box-sizing:border-box}@media (prefers-reduced-motion: no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}</style><link rel="stylesheet" href="styles.949d7070ade159ee.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.949d7070ade159ee.css"></noscript></head>
-<body>
-  <app-root></app-root>
-<script src="runtime.ca06a4a18840c113.js" type="module"></script><script src="polyfills.98b8c83719069cae.js" type="module"></script><script src="scripts.2c76487ca5c4241e.js" defer></script><script src="main.61f83217e9f911ee.js" type="module"></script>
+<!DOCTYPE html>
+<html>
 
-</body></html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BigTix | B2B2C Ticketing Platorm</title>
+  <link rel="stylesheet" href="css/bulma.css" />
+  <link rel="stylesheet" href="css/library.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/bulma-carousel.min.css">
+</head>
+
+<body>
+  <nav id="main-nav" class="navbar is-black is-centered" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="images/logo-bigtix.png" height="32" />
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasic" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#goabout">About</a>
+        <a class="navbar-item" href="#gotechnologies">Technologies</a>
+        <a class="navbar-item" href="#gocapabilites">Capabilities</a>
+        <a class="navbar-item" href="#gotestimonials">Testimonials</a>
+        <a class="navbar-item" href="#gocontact">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <section id="home" class="columns bg-black ">
+    <div class="column is-6-tablet text">
+      <h3>BigTix</h3>
+      <h2> One ticketing platform <br> Multiple possibilities </h2>
+      <h4 class="text-yellow">Introducing BigTix: </h4>
+      <p>our turnkey enterprise ticketing solution with everything you need to create, manage and sell your products
+      </p>
+      <a class="button" href="#goabout">Get Started</a>
+    </div>
+    <div class="">
+      <div class="banner banner-right">
+        <img src="images/banner-concert.jpg">
+      </div>
+    </div>
+  </section>
+  <section id="about" class="columns is-multiline">
+    <span id="goabout" class="anchor"></span>
+
+    <div class="column is-offset-7 is-5-tablet text ">
+      <h2>About BigTix</h2>
+      <p>
+        <strong>BigTix</strong> is a B2B2C platform which enables Attractions, Performance Venues, Clubs, City Tours and
+        Promoters to Control their own ticketing and Connect to BookMyShow’s network of Channel partners and Value-added
+        Tools <br>
+        <br> A Cloud based software as a service platform - no more complex infrastructure investment and maintenance
+      </p>
+    </div>
+    <div class="banner banner-left">
+      <img src="images/banner-pc.jpg">
+    </div>
+  </section>
+  <section id="products">
+    <span id="gotechnologies" class="anchor"></span>
+    <div class="header">
+      <h3 class="text-centered">Transform Your Business <br> with Smarter Measurement </h3>
+    </div>
+    <div class="product-wrapper columns is-multiline is-centered">
+      <div class="columns is-12 is-multiline text-centered">
+        <div class="column is-4 card">
+          <img src="images/icon-event-builder.png">
+          <h4>Comprehensive Event Builder</h4>
+          <p>Sell tickets to live events, attractions, festivals and even merchandise using the deep event builder on
+            our platform </p>
+        </div>
+        <div class="column is-4 card">
+          <img src="images/icon-api.png">
+          <h4>API Integration & White Label Channel Partners</h4>
+          <p>Control your own ticketing. Seamlessly integrate with your website & tap into our network of channels and
+            value-added tools. </p>
+        </div>
+        <div class="column is-4 card">
+          <img src="images/icon-event-builder.png">
+          <h4>Interactive Seat Map</h4>
+          <p>Theatres, Convention Centres, Arenas - we have you covered. Our interactive seat map selection supports all
+            of them and more. </p>
+        </div>
+      </div>
+      <div class="column columns is-8 is-multiline text-centered">
+        <div class="column is-6 card">
+          <img src="images/icon-auto-seat.png">
+          <h4>Auto Seat Allocation </h4>
+          <p>Hot show? Turn on auto seat allocation for your event with no worries of stability. Our platform is
+            designed for thousands of concurrent users. </p>
+        </div>
+        <div class="column is-6 card">
+          <img src="images/icon-bi.png">
+          <h4>Business Intelligence <br>Dashboard </h4>
+          <p>Know your customer, grow your audience. Track your KPIs, metrics and other key data points and gain
+            actionable insights to improve ticket sales.</p>
+        </div>
+        <div class="column is-6 card">
+          <img src="images/icon-pos.png">
+          <h4>Box Office Management <br>& POS </h4>
+          <p>Speed through ticket sales at the door, manage reservations and transactions through an intuitive interface
+            that’s easy for staff to learn</p>
+        </div>
+        <div class="column is-6 card">
+          <img src="images/icon-scale.png">
+          <h4>Scales to Meet <br>High Demand</h4>
+          <p>Our infrastructure is proven to meet even the biggest spikes in demand for the hottest shows in town,
+            without ever having failed! Reference Image Below.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technologies" class="bg-black ">
+    <span id="gocapabilites" class="anchor"></span>
+    <div class="header">
+      <h3>Your Work Becomes Highly <br> Eficient With BigTix </h3>
+    </div>
+
+    <div class="slider  is-multiline " id="carousel-features">
+      
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-whitelabel.png">
+        </div>
+        <h4>White label Your Way </h4>
+        <p>Customize to your Brand and Festive Moods or Create White Label Ticketing for Partners and Sponsors from the
+          start till the end of the ticket purchase process along customized e-mail confirmation and e-tickets.</p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-pricing.png">
+        </div>
+        <h4>Auto Price Switching </h4>
+        <p>Bigtix can auto-switch from one Ticket Type to another when the quota allocated for the previous pricing is
+          met. No manual intervention needed</p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-rsvp.png">
+        </div>
+        <h4>Reservations</h4>
+        <p>The reservation module helps with making a reservation for a customer who confirmed their interest to
+          purchase.
+          The customer can go ahead and make the payment via the payment link received on the e-mail or offline.</p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-calendar.png">
+        </div>
+        <h4>Scheduled Publishing</h4>
+        <p>Changes made in events / packages can be published on the website at a later time, from small content changes
+          to listing an event on the website</p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-promo.png">
+        </div>
+        <h4>Promo Code Engine</h4>
+        <p>Changes made in events / packages can be published on the website at a later time, from small content changes
+          to listing an event on the website</p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-merchant-credit.png">
+        </div>
+        <h4>Merchant Credit Account</h4>
+        <p>A virtual wallet for the channel partner to sell tickets as per the credit availability.
+        </p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-ota.png">
+        </div>
+        <h4>Online Travel Agency (OTA) Module
+        </h4>
+        <p>The offline agents or online integrated agents can sell from the quota assigned by the promoter with their
+          own
+          branding.
+        </p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-member.png">
+        </div>
+        <h4>Attraction Feature (Pass)</h4>
+        <p>A virtual or physical membership pass that can be redeemed against the products according to the membership
+          class.
+        </p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-screens.png">
+        </div>
+        <h4>Mobile Responsive Sales Dashboard
+        </h4>
+        <p>Review your Sales and Analytics charts, Create Product Pricing, Control User Permissions and Tailor
+          Promotions
+          to your needs on any devices
+        </p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-section.png">
+        </div>
+        <h4>Overview & Section View Booking Flow
+        </h4>
+        <p>Section view flow – Selling tickets for big venue now made easy by providing a smoother seat selection flow
+          where customer doesn’t have to zoom-in to select seats
+        </p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-block.png">
+        </div>
+        <h4>Blacklisting</h4>
+        <p>Scalpers can be blocked from purchasing tickets on the portal via their phone number or email ID
+        </p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-collections.png">
+        </div>
+        <h4>Collections
+        </h4>
+        <p>BigTix allows you to group products or a promotion in a portal website.
+        </p>
+      </div>
+
+      <div class=" card">
+        <div class="thumb">
+          <img src="images/icon-package.png">
+        </div>
+        <h4>Package</h4>
+        <p>BigTix allows you to sell a combination of ticket types derived from different events, which is made
+          available
+          at a discounted price and purchase numbered in a single transaction.
+        </p>
+      </div>
+
+    </div>
+
+
+  </section>
+  <section id="capabilites">
+    <div class="header text-centered">
+      <h3> All-Inclusive Services </h3>
+      <h5>Everything you need to host a successful event</h5>
+    </div>
+    <div class="columns is-multiline bg-black">
+      <div class="column is-8 columns is-multiline">
+        <div class="column is-6 card">
+          <div class="thumb">
+            <img src="images/icon-pg.png">
+          </div>
+          <h4>Payment Interfacesy </h4>
+          <p>Payment gateway integrations to support major payment methods including VISA, MasterCard, American Express,
+            Alipay, JCB and more </p>
+        </div>
+        <div class="column is-6 card">
+          <div class="thumb">
+            <img src="images/icon-access.png">
+          </div>
+          <h4>Access Control </h4>
+          <p>Use our fast and precise QR code/barcode Scanners and Access Control software to keep queues at a minimum
+          </p>
+        </div>
+        <div class="column is-6 card">
+          <div class="thumb">
+            <img src="images/icon-3rd.png">
+          </div>
+          <h4>Useful 3rd Party Tools</h4>
+          <p>Utilise our CRM & EDM tools integration to easily reach out to customers, know their interests and keep
+            them coming back for more. </p>
+        </div>
+        <div class="column is-6 card">
+          <div class="thumb">
+            <img src="images/icon-virtual.png">
+          </div>
+          <h4>Engage Your Fans With Virtual Experiences and Shows </h4>
+          <p>BigTix is integrated to video streaming platforms and can playback the videos with the BMS or any
+            Whitelabel branding. </p>
+        </div>
+      </div>
+      <div class="banner banner-potrait">
+        <img src="images/banner-services.jpg">
+      </div>
+    </div>
+  </section>
+  <section id="testimonials">
+    <span id="gotestimonials" class="anchor"></span>
+
+    <h3>Testimonials</h3>
+    <div id="carousel-demo" class="carousel">
+      <div class="item columns is-mobile">
+        <div class="column is-narrow thumb">
+          <img src="images/logo-imc.png">
+        </div>
+        <div class="column text is-offset-1">
+          <h5>Speed through ticket sales at the door, manage reservations and transactions through an intuitive
+            interface that’s easy for staff to learn -<strong>IMC GROUP ASIA</strong></h5>
+            <h5 class="text-right"><button class="medium modal-button" data-target="modal-imc">Read More</button>
+            </h5>
+          </div>
+      </div>
+      <div class="item columns is-mobile">
+        <div class="column is-narrow thumb">
+          <img src="images/logo_unusual.jpg">
+        </div>
+        <div class="column text is-offset-1">
+          <h5>Speed through ticket sales at the door, manage reservations and transactions through an intuitive
+            interface that’s easy for staff to learn -<strong>UnUsUal</strong></h5>
+            <h5 class="text-right"><button class="medium modal-button" data-target="modal-unusual">Read More</button>
+            </div>
+      </div>
+      <div class="item columns is-mobile">
+        <div class="column is-narrow thumb">
+          <img src="">
+        </div>
+        <div class="column text is-offset-1">
+          <h5>Speed through ticket sales at the door, manage reservations and transactions through an intuitive
+            interface that’s easy for staff to learn -<strong>Blue Sky Events</strong></h5>
+            <h5 class="text-right"><button class="medium modal-button" data-target="modal-bluesky">Read More</button>
+
+            </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="modal-imc" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image">
+        <img src="images/letter_imc.jpeg" alt="">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+
+  <div id="modal-unusual" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image">
+        <img src="images/letter_unusual.jpeg" alt="">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div id="modal-bluesky" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image">
+        <img src="images/letter_blusky.jpeg" alt="">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <section id="contact" class="text-centered">
+    <span id="gocontact" class="anchor"></span>
+
+    <div class="header">
+      <h3>How Can We Help You</h3>
+      <h5>if you're looking to learn more about BigTix Enterprise ticketing solution, fill out this form and we will get
+        back to you as soon as we can. </h5>
+    </div>
+    <details id="contactForm">
+      <summary>Prospective Client Enquiry</summary>
+      <form class="business-form"
+        action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSf43mXqpH52Hi7dJUOskydDjQMcjn6brr_LczA1CRfVz1xp_A/formResponse"
+            target="_self" method="POST">
+    
+        <label for="entry.1985689007">Full Name:</label>
+        <input type="text" id="name" name="entry.1985689007" class="text" required="">
+    
+        <label for="entry.976802302">Work Email:</label>
+        <input type="text" id="phone" name="entry.976802302" class="text" required="">
+    
+        <label for="entry.1342019725">Phone:</label>
+        <input type="text" id="phone" name="entry.1342019725" class="text" required="">
+    
+        <label for="entry.813278002">Organization:</label>
+        <input type="text" id="phone" name="entry.813278002" class="text" required="">
+        
+        <p>Request For</p>
+        <input type="radio" id="new_business" name="entry.1312320249" value="New Business Inquiry" required>
+        <label for="new_business">New Business Inquiry</label>
+    
+        <input type="radio" id="demo" name="entry.1312320249" value="Book a Demo">
+        <label for="demo">Book a Demo</label>
+    
+        <input type="radio" id="pricing" name="entry.1312320249" value="Request for Pricing">
+        <label for="pricing">Request for Pricing</label>
+        
+        <label for="entry.1772502325"><strong>How we can help?</strong></label>
+        <textarea type="text" id="ask" name="entry.1772502325" class="text"></textarea>
+
+        <input type="submit" value="Submit" class="submit">
+
+    
+      </form>
+    </details>
+    </section>
+    <footer class="bg-black text-centered">
+      <!-- <h4>Contact Us</h4> -->
+      <img class="logo-bms" src="images/logo-bigtix.png">
+<!-- 
+      <div class="columns is-centered">
+        <div class="column">
+          <img src="images/icon-png/phone.png">
+          <p>+65 555 5555</p>
+        </div>
+
+        <div class="column">
+          <img src="images/icon-png/mail.png">
+          <p>Your Email</p>
+        </div> -->
+
+        <div class="column">
+          <!-- <img src="images/icon-png/location.png"> -->
+          <p>BIGTREE ENTERTAINMENT SINGAPORE PTE LTD <br>ARC 380, 380 Jln Besar, Singapore 209000</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="js/bulma-carousel.min.js"></script>
+    <script>
+      bulmaCarousel.attach('#carousel-demo', {
+        slidesToScroll: 1,
+        slidesToShow: 1
+      });
+
+      bulmaCarousel.attach('#carousel-features', {
+        slidesToScroll: 4,
+        slidesToShow: 4,
+        pagination: false,
+        loop: true,
+        breakpoints: [
+          { changePoint: 480, slidesToShow: 1, slidesToScroll: 1 }, 
+          { changePoint: 640, slidesToShow: 2, slidesToScroll: 2 }, 
+          { changePoint: 1024, slidesToShow: 3, slidesToScroll: 3 } ],
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach((el) => {
+            el.addEventListener("click", () => {
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Functions to open and close a modal
+        function openModal($el) {
+          $el.classList.add('is-active'); 
+          console.log ("is-active");
+        }
+
+        function closeModal($el) {
+          $el.classList.remove('is-active');
+        }
+
+        function closeAllModals() {
+          (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+            closeModal($modal);
+          });
+        }
+
+        // Add a click event on buttons to open a specific modal
+        (document.querySelectorAll('.modal-button') || []).forEach(($trigger) => {
+          const modal = $trigger.dataset.target;
+          const $target = document.getElementById(modal);
+          // console.log($target);
+
+          console.log ("is-active ?");
+
+          $trigger.addEventListener('click', () => {
+            openModal($target);
+            console.log ("is-active 2");
+          });
+        });
+
+        // Add a click event on various child elements to close the parent modal
+        (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+          const $target = $close.closest('.modal');
+
+          $close.addEventListener('click', () => {
+            closeModal($target);
+          });
+        });
+
+        // Add a keyboard event to close all modals
+        document.addEventListener('keydown', (event) => {
+          const e = event || window.event;
+
+          if (e.keyCode === 27) { // Escape key
+            closeAllModals();
+          }
+        });
+      });
+
+
+
+    </script>
+
+  </body>
+</html>
